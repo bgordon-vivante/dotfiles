@@ -1,0 +1,23 @@
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab.vivantehealth.com:"]
+        insteadOf = http://gitlab.vivantehealth.com/
+[url "git@gitlab.vivantehealth.com:"]
+        insteadOf = https://gitlab.vivantehealth.com/
+[user]
+	name = Brian Gordon
+	email = bgordon@vivantehealth.com
+	signingkey = 31F7F11131BD3760
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = /Users/bgordon/.gitignore_global
+[push]
+	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
